@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'feature_test_helper'
 
-RSpec.feature "Login", type: :feature do
+RSpec.feature "Log in", type: :feature do
   let(:first_name) { 'Bob' }
   let(:last_name) { 'Geldof' }
   let(:email) { 'its.me@bobgeldof.com' }
@@ -18,7 +18,7 @@ RSpec.feature "Login", type: :feature do
     fill_in('session[email]', with: email)
     fill_in('session[password]', with: password)
     click_button('Log in')
-    expect(page).to have_content 'New post'
+    expect(page).to have_content first_name
   end
 
   scenario "login with invlaid information" do

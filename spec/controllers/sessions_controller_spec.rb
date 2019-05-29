@@ -17,11 +17,11 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
-    it 'redirect to posts#index' do
+    it 'redirect to user#show' do
       user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
       get :new
       post :create, params: { session: { email: 'bob@bear.com', password: 'bobby' } }
-      expect(response).to redirect_to(posts_url)
+      expect(response).to redirect_to(user_url(user))
     end
 
     it 'assigns user_id to session' do
