@@ -1,26 +1,44 @@
-# AceBook
+# BearBook
 
-REQUIRED INSTRUCTIONS:
+## Project description:
+A social media network.
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
+Link to deployed version of the application http://acebook-the-brave-bears.herokuapp.com/
 
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
+INSTRUCTIONS:
 
-2. The card wall is here: <please update>
+First, Fork this repository then clone it.
 
+How to install the Gems from the Gemfile:
+```bash
+> bundle
+```
+
+How to set up the database:
+```bash
+> bin/rails db:create
+> bin/rails db:migrate
+```
+
+How to run tests:
+```bash
+> rspec
+```
+
+How to run the server:
+```bash
+> rails server
+```
+
+How to deploy the application:
+```bash
+>
+```
+
+How to contribute to the project:
 ## How to contribute to this project
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Quickstart
-
-First, clone this repository. Then:
-
-```bash
-> bundle install
-> bin/rails db:create
-> bin/rails db:migrate
-
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
-```
+Links to the Projects documentation:
+The Card wall is here https://github.com/CarlyJ88/Acebook-The-Brave-Bears/projects/1
+The teams documentation is here https://github.com/CarlyJ88/Acebook-The-Brave-Bears/wiki
