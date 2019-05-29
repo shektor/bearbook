@@ -1,5 +1,6 @@
-<% @users.reverse.each do |user| %>
+<% @users.each do |user| %>
   <%= user.first_name.capitalize %>
   <%= user.last_name.capitalize %>
+  <%= link_to "Profile", user_path(user) %>
   <br>
 <% end %>
