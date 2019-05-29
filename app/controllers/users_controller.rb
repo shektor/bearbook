@@ -18,6 +18,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all
+    @user = User.find(session[:user_id])
+  end
+
   private
 
   def user_params
