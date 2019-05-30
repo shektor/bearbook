@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
   get '/error', to: 'errors#not_found'
 
-
-  # get 'errors/internal_server_error'
-
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
@@ -14,4 +11,5 @@ Rails.application.routes.draw do
 
 
   root 'sessions#new'
+  get '*path', to: 'errors#not_found'
 end
