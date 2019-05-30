@@ -8,7 +8,7 @@ RSpec.feature "Can log out", type: :feature do
     sign_up
     log_in
     expect(page).to have_content 'New post'
-    click_link('Log out')
+    click_link('Logout')
     expect(page).to have_selector("input[type=submit][value='Log in']")
   end
 end
