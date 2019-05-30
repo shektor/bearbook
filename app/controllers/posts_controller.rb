@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @user = User.find(session[:user_id])
     @post = Post.find(params[:id])
   end
 
