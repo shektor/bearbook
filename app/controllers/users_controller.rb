@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]).present?
   end
 
   def new
@@ -12,6 +12,8 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       @user.save
       redirect_to login_path
+    elsif @userdbcheck.nil?
+        redirect_to error_url
     else
       flash.now[:danger] = 'Email has already been taken'
       render 'new'

@@ -8,11 +8,16 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       redirect_to posts_url
+    elsif user.nil?
+        redirect_to error_url
     else
       flash.now[:danger] = 'Invalid credentials'
       render 'new'
     end
   end
+
+
+
 
   def destroy
     session.clear
