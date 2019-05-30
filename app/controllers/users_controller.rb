@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :require_login, except: [:new, :create]
+
   def show
     @user = User.find(params[:id])
   end
@@ -24,6 +27,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def require_login
+    redirect_to root_path unless logged_in?
+  end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)

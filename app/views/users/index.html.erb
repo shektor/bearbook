@@ -1,5 +1,43 @@
-<% @users.reverse.each do |user| %>
-  <%= user.first_name.capitalize %>
-  <%= user.last_name.capitalize %>
-  <br>
-<% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <title>Bearbook - Posts</title>
+  </head>
+  <body>
+
+    <div class="page_wrapper">
+      <div class="menu_container">
+        <div class="menu">
+          <div class="left-hand-side">
+            <div class="welcome">
+              Welcome
+              <%= @user.first_name.capitalize %>
+            </div>
+          </div>
+
+          <div class="right-hand-side">
+            <div class="logout">
+              <%= link_to logout_path, method: :delete do %>
+              Log out
+            <% end %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-wrapper">
+      <div class="user-list">
+        <% @users.each do |user| %>
+          <%= user.first_name.capitalize %>
+          <%= user.last_name.capitalize %>
+          <%= link_to user.email, user_path(user) %>
+          <br>
+        <% end %>
+      </div>
+    </div>
+
+  </body>
+</html>

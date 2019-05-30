@@ -288,6 +288,27 @@ input[type=text], input[type=password], input[type=email] {
   width: 100%;
 }
 
+/* User list */
+
+.user-wrapper {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 100%;
+  color: rgb(90, 110, 240);
+  font-weight: bold;
+  font-size: 22px;
+}
+
 /* Other */
 
 .new_post_link_button {
