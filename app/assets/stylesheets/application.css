@@ -356,3 +356,31 @@ input[type=text], input[type=password], input[type=email] {
   text-decoration: none;
   font-weight: bold;
 }
+
+.logout a:link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout a:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout a:hover {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.logout a:active {
+  color: white;
+  font-weight: bold;
+}
+
+.logout a {
+  margin-left: 10px;
+
+}

@@ -1,0 +1,37 @@
+<div class="page_wrapper">
+
+  <div class="menu_container">
+
+    <div class="menu">
+
+      <div class="left-hand-side">
+        <div class="welcome">
+          Welcome
+          <%= @user.first_name.capitalize %>
+        </div>
+      </div>
+
+      <div class="right-hand-side">
+
+        <div class="logout">
+          <%= link_to @user do %>
+          &#128059; Profile
+          <% end %>
+          <%= link_to posts_path do %>
+          Posts
+          <% end %>
+          <%= link_to users_path do %>
+          Users
+          <% end %>
+          <%= link_to logout_path, method: :delete do %>
+          Logout
+          <% end %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

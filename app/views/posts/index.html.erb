@@ -8,33 +8,7 @@
   </head>
   <body>
 
-    <div class="page_wrapper">
-
-      <div class="menu_container">
-
-        <div class="menu">
-
-          <div class="left-hand-side">
-            <div class="welcome">
-              Welcome
-              <%= @user.first_name.capitalize %>
-            </div>
-          </div>
-
-          <div class="right-hand-side">
-            <div class="logout">
-              <%= link_to logout_path, method: :delete do %>
-              Log out
-            <% end %>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+  <%= render "shared/menu" %>
 
   <div class="posts_wrapper">
 
