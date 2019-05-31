@@ -1,4 +1,4 @@
-# AceBook
+# AceBook     [![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears)
 
 ### [Welcome](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#welcome-to-bearbook) - [Team](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#team) - [Screenshots](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#screenshots) - [Our Process](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#our-process) - [Quickstart](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#quickstart) - [Testing](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#testing) 
 
