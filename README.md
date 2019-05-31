@@ -1,4 +1,4 @@
-# AceBook     [![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears)
+# AceBook     [![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears)[![Coverage Status](https://coveralls.io/repos/github/CarlyJ88/Acebook-The-Brave-Bears/badge.svg?branch=master&service=github)](https://coveralls.io/github/CarlyJ88/Acebook-The-Brave-Bears?branch=master&service=github)
 
 ### [Welcome](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#welcome-to-bearbook) - [Team](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#team) - [Screenshots](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#screenshots) - [Our Process](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#our-process) - [Quickstart](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#quickstart) - [Testing](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#testing) 
 
