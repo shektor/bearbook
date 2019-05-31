@@ -319,6 +319,12 @@ input[type=text], input[type=password], input[type=email] {
   background-color: #fff;
 }
 
+.user-list h2 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: black;
+}
+
 /* User Wall Page */
 
 .user-wall-wrapper {
