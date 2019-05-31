@@ -18,11 +18,11 @@ Bearbook is an iteration of the Makers Acebook clone engineering project. To try
 ## Screenshots
 
 #### Signup
-![Signup](https://imgur.com/GlcPadc)
+![Signup](https://i.imgur.com/GlcPadc.jpg)
 #### Login
-![Login](https://imgur.com/IisN4Sf)
+![Login](https://imgur.com/IisN4Sf.jpg)
 #### Profile
-![Profile](https://imgur.com/EZUZ7PS)
+![Profile](https://imgur.com/EZUZ7PS.jpg)
 
 ## Our Process
 
