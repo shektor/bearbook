@@ -1,4 +1,4 @@
-RSpec.feature "Can log out", type: :feature do
+RSpec.feature "Log out", type: :feature do
   let(:first_name) { 'Bob' }
   let(:last_name) { 'Geldof' }
   let(:email) { 'its.me@bobgeldof.com' }
@@ -7,7 +7,7 @@ RSpec.feature "Can log out", type: :feature do
   scenario "user can log out after they have logged in" do
     sign_up
     log_in
-    expect(page).to have_content 'New post'
+    visit('/posts')
     click_link('Logout')
     expect(page).to have_selector("input[type=submit][value='Log in']")
   end

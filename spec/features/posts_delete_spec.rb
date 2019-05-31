@@ -9,6 +9,7 @@ RSpec.feature "User can delete post", type: :feature do
   scenario "User can delete their own post" do
     sign_up
     log_in
+    visit('/posts')
     click_link('New post')
     fill_in('post[message]', with: "Hello I'm Bob Geldof!")
     click_button('Submit')
@@ -20,6 +21,7 @@ RSpec.feature "User can delete post", type: :feature do
   scenario "User cannot delete a post they didn't make" do
     sign_up
     log_in
+    visit('/posts')
     click_link('New post')
     fill_in('post[message]', with: "Hello I'm Bob Geldof!")
     click_button('Submit')
@@ -39,6 +41,7 @@ RSpec.feature "User can delete post", type: :feature do
     fill_in('session[email]', with: email)
     fill_in('session[password]', with: password)
     click_button('Log in')
+    visit('/posts')
     expect(page).to have_no_link("Delete Post")
   end
 end
