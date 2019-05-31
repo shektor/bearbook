@@ -8,9 +8,14 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(session[:user_id])
-    @post = @user.posts.create(posts_params)
+    post = @user.posts.create(posts_params)
+    @post = Post.find(post.id)
 
-    redirect_to posts_url
+    if @post.wall_id == nil
+      redirect_to posts_url
+    else
+      redirect_to user_url(@post.wall_id)
+    end
   end
 
   def edit
@@ -22,7 +27,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.update(edit_params)
 
-    redirect_to posts_url
+    if @post.wall_id == nil
+      redirect_to posts_url
+    else
+      redirect_to user_url(@post.wall_id)
+    end
   end
 
   def index
@@ -41,11 +50,11 @@ class PostsController < ApplicationController
 
   def edit_params
     params.require(:post).permit(:message)
-  end 
+  end
 
   def posts_params
     {
-      message: params.require(:post).permit(:message)[:message], 
+      message: params.require(:post).permit(:message)[:message],
       wall_id: params[:user][:id]
     }
   end

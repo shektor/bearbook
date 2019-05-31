@@ -58,6 +58,17 @@ RSpec.describe PostsController, type: :controller do
       put :update, params: { id: @post.id, post: { message: "Bye" }, user: { id: nil } }
       expect(response).to redirect_to(posts_url)
     end
+
+    it "redirects a user wall" do
+      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      session[:user_id] = user.to_param
+      post :create, params: { post: { message: "Hello, world!" }, user: { id: user.id } }
+      expect(Post.find_by(message: "Hello, world!")).to be
+      @post = Post.find_by(message: "Hello, world!")
+      get :edit, params: {id: @post.id}
+      put :update, params: { id: @post.id, post: { message: "Bye" } }
+      expect(response).to redirect_to(user_url(user.id))
+    end
   end
 
   describe "DELETE /" do
