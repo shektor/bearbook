@@ -443,3 +443,10 @@ input[type=text], input[type=password], input[type=email] {
   margin-left: 10px;
 
 }
+
+#redirect-error {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
