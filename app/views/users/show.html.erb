@@ -76,6 +76,8 @@
           <%= form.text_area :message, placeholder: "What are the bear necessities..." %>
         </div>
 
+        <%= hidden_field(:user, :id) %>
+
         <div class="new_post_button">
           <%= form.submit "Submit", class: :btn %>
         </div>
