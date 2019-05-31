@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     @post = @user.posts.create(posts_params)
+    p params
 
     redirect_to posts_url
   end
@@ -40,7 +41,7 @@ class PostsController < ApplicationController
   private
 
   def posts_params
-    params.require(:post).permit(:message)
+    {message: params.require(:post).permit(:message)[:message], wall_id: params.require(:user).permit(:id)[:id] }
   end
 
   def require_login
