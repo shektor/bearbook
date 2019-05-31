@@ -8,7 +8,43 @@
   </head>
   <body>
 
-    <%= render "shared/menu" %>
+    <div class="page_wrapper">
+
+      <div class="menu_container">
+
+        <div class="menu">
+
+          <div class="left-hand-side">
+            <div class="welcome">
+              Welcome
+              <%= @current_user.first_name.capitalize %>
+            </div>
+          </div>
+
+          <div class="right-hand-side">
+
+            <div class="logout">
+              <%= link_to @current_user do %>
+              &#128059; Profile
+              <% end %>
+              <%= link_to posts_path do %>
+              Posts
+              <% end %>
+              <%= link_to users_path do %>
+              Users
+              <% end %>
+              <%= link_to logout_path, method: :delete do %>
+              Logout
+              <% end %>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="user-wall-wrapper">
 
@@ -60,7 +96,7 @@
           <div class="time_of_post"><%= post.created_at %></div>
 
           <div class="delete_post">
-            <% if post.user.id == @user.id %>
+            <% if post.user.id == @current_user.id %>
               <%= link_to 'Edit', edit_post_path(post) %>
               <span>-</span>
               <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -73,54 +109,6 @@
 
     </div>
 
-          <div class="post_new_container">
-        <%= form_with scope: :post, url: posts_path, local: true do |form| %>
-
-        <div class="bear_icon_post_new">&nbsp; &#128059; &nbsp;
-          <span id="special-text">Message</span></div>
-          
-
-        <div class="new_post_label">
-          <%= form.label :message %>
-        </div>
-        
-
-        <div class="new_post_message">
-          <%= form.text_area :message, placeholder: "What are the bear necessities..." %>
-        </div>
-        <%=hidden_field(:user, :id)%>
-
-        <div class="new_post_button">
-          <%= form.submit "Submit", class: :btn %>
-        </div>
-
-      <% end %>
-
-      <% @posts.reverse.each do |post| %>
-    <div class="post_container">
-
-      <div class="bear_icon_post">&#128059;</div>
-
-      <div class="user_name_post"><%=post.user.first_name.capitalize%>
-        <%=post.user.last_name.capitalize%></div>
-
-      <div class="user_content_post"><%= simple_format(post.message) %></div>
-
-      <div class="time_of_post"><%= post.created_at %></div>
-
-      <div class="delete_post">
-        <% if post.user.id == @current_user.id %>
-          <%= link_to 'Edit', edit_post_path(post) %>
-          <span>-</span>
-          <%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <%end%>
-      </div>
-
-    </div>
-
-  <% end %>
-
   </body>
 
 </html>
-
