@@ -1,14 +1,41 @@
-<h1>Update post</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<%= form_with(model: @post, local: true) do |form| %>
+<head>
+  <meta charset="utf-8">
 
-<p>
-  <%= form.label :message %><br>
-  <%= form.text_field :message %>
-</p>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+  <title>Bearbook - Edit Posts</title>
+</head>
 
-<p>
-  <%= form.submit %>
-</p>
+<body>
 
-<% end %>
+<%= render "shared/menu" %>
+
+  <div class="posts_wrapper">
+    <div class="post_new_container">
+
+      <%= form_with(model: @post, local: true) do |form| %>
+
+      <div class="bear_icon_post_new">&nbsp; &#128059; &nbsp;
+        <span id="special-text">Edit Message</span></div>
+
+      <div class="new_post_label">
+        <%= form.label :message %><br>
+      </div>
+
+      <div class="new_post_message">
+        <%= form.text_area :message %>
+      </div>
+
+      <div class="new_post_button">
+        <%= form.submit "Update message", class: :btn %>
+      </div>
+
+      <% end %>
+    </div>
+  </div>
+
+</body>
+
+</html>

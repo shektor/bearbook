@@ -4,35 +4,10 @@
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-    <title>Acebook - Posts</title>
+    <title>Bearbook - Posts</title>
   </head>
   <body>
-
-    <div class="page_wrapper">
-
-      <div class="menu_container">
-
-        <div class="menu">
-
-          <div class="left-hand-side">
-            <div class="welcome">
-              Welcome
-              <%= @user.first_name.capitalize %>
-            </div>
-          </div>
-
-          <div class="right-hand-side">
-            <div class="logout">
-              Logout
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+  <%= render "shared/menu" %>
 
     <div class="posts_wrapper">
 

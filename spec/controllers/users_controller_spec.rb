@@ -11,6 +11,7 @@ RSpec.describe UsersController, type: :controller do
   describe 'GET #show' do
     it "returns a success response" do
       user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      session[:user_id] = user.id
       get :show, params: { id: user.to_param}
       expect(response).to be_success
     end
@@ -23,6 +24,15 @@ RSpec.describe UsersController, type: :controller do
       user = User.find_by(email: 'bob@bear.com')
       expect(user.first_name).to eq 'Bob'
       expect(user.last_name).to eq 'Bear'
+    end
+  end
+
+  describe "GET /" do
+    it "responds with 200" do
+      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      session[:user_id] = user.to_param
+      get :index
+      expect(response).to have_http_status(200)
     end
   end
 end

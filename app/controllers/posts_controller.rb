@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :require_login
+
   def new
     @user = User.find(session[:user_id])
   end
@@ -12,6 +14,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @user = User.find(session[:user_id])
     @post = Post.find(params[:id])
   end
 
@@ -39,4 +42,9 @@ class PostsController < ApplicationController
   def posts_params
     params.require(:post).permit(:message)
   end
+
+  def require_login
+    redirect_to root_path unless logged_in?
+  end
+
 end
