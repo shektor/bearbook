@@ -20,13 +20,13 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(posts_params)
+    @post.update(edit_params)
 
     redirect_to posts_url
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.where(:wall_id => nil)
     @user = User.find(session[:user_id])
   end
 
@@ -39,8 +39,15 @@ class PostsController < ApplicationController
 
   private
 
-  def posts_params
+  def edit_params
     params.require(:post).permit(:message)
+  end 
+
+  def posts_params
+    {
+      message: params.require(:post).permit(:message)[:message], 
+      wall_id: params[:user][:id]
+    }
   end
 
   def require_login
