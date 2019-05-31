@@ -28,6 +28,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
   width: 100%;
   height: 100%;
+  background-color: #F8F8F8;
 }
 
 .wrapper {
@@ -192,6 +193,7 @@ input[type=text], input[type=password], input[type=email] {
   flex-wrap: wrap;
   margin: 20px 0px;
   align-self: center;
+  background-color: #fff;
 }
 
 .bear_icon_post {
@@ -252,6 +254,7 @@ input[type=text], input[type=password], input[type=email] {
   border: 1px solid slategrey;
   justify-content: center;
   flex-direction: column;
+  background-color: #fff;
 }
 
 .post_new_container form {
@@ -313,6 +316,7 @@ input[type=text], input[type=password], input[type=email] {
   color: rgb(90, 110, 240);
   font-weight: bold;
   font-size: 22px;
+  background-color: #fff;
 }
 
 /* User Wall Page */
@@ -330,6 +334,7 @@ input[type=text], input[type=password], input[type=email] {
   display: flex;
   border: 1px solid slategrey;
   padding: 20px;
+  background-color: #fff;
 }
 
 .user-details-box {
