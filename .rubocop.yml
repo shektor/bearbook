@@ -52,6 +52,15 @@ Metrics/BlockLength:
     - 'spec/**/*'
     - 'test/**/*'
 
+AllCops:
+  Exclude:
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - '**/Rakefile'
+    - '**/Gemfile'
+    - 'spec/**/rails_helper'
+
 # Code Style
 # ==========
 #

@@ -18,7 +18,7 @@ RSpec.describe SessionsController, type: :controller do
 
   describe 'POST #create' do
     it 'redirect to posts#index' do
-      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
       get :new
       post :create, params: { session: { email: 'bob@bear.com', password: 'bobby' } }
       expect(response).to redirect_to(posts_url)
@@ -34,7 +34,7 @@ RSpec.describe SessionsController, type: :controller do
 
   describe "DELETE #destroy" do
     it 'redirects to login page' do
-      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
       get :new
       post :create, params: { session: { email: 'bob@bear.com', password: 'bobby' } }
       delete :destroy
@@ -42,7 +42,7 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     it 'destroys a session' do
-      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
       get :new
       post :create, params: { session: { email: 'bob@bear.com', password: 'bobby' } }
       delete :destroy

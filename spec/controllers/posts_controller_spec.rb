@@ -40,7 +40,7 @@ RSpec.describe PostsController, type: :controller do
       post :create, params: { post: { message: "Hello, world!" } }
       expect(Post.find_by(message: "Hello, world!")).to be
       @post = Post.find_by(message: "Hello, world!")
-      get :edit, params: {id: @post.id}
+      get :edit, params: { id: @post.id }
       expect(Post.find_by(message: "Hello, world!")).to be
 
     end
@@ -53,7 +53,7 @@ RSpec.describe PostsController, type: :controller do
       post :create, params: { post: { message: "Hello, world!" } }
       expect(Post.find_by(message: "Hello, world!")).to be
       @post = Post.find_by(message: "Hello, world!")
-      get :edit, params: {id: @post.id}
+      get :edit, params: { id: @post.id }
       put :update, params: { id: @post.id, post: { message: "Bye" } }
       expect(Post.find_by(message: "Bye")).to be
     end
@@ -64,7 +64,7 @@ RSpec.describe PostsController, type: :controller do
       post :create, params: { post: { message: "Hello, world!" } }
       expect(Post.find_by(message: "Hello, world!")).to be
       @post = Post.find_by(message: "Hello, world!")
-      get :edit, params: {id: @post.id}
+      get :edit, params: { id: @post.id }
       put :update, params: { id: @post.id, post: { message: "Bye" } }
       expect(response).to redirect_to(posts_url)
     end
@@ -78,20 +78,20 @@ RSpec.describe PostsController, type: :controller do
       expect(Post.find_by(message: "Hello, world!")).to be
       @post = Post.find_by(message: "Hello, world!")
 
-      expect{
-        delete :destroy, params: {id: @post.id}
-      }.to change(Post,:count).by(-1)
-   end
+      expect {
+        delete :destroy, params: { id: @post.id }
+      }.to change(Post, :count).by(-1)
+    end
 
-   it "redirects to post index" do
-     user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
-     session[:user_id] = user.to_param
-     post :create, params: { post: { message: "Hello, world!" } }
-     expect(Post.find_by(message: "Hello, world!")).to be
-     @post = Post.find_by(message: "Hello, world!")
-     delete :destroy, params: {id: @post.id}
+    it "redirects to post index" do
+      user = User.create!(first_name: 'Bob', last_name: 'Bear', email: 'bob@bear.com', password: 'bobby')
+      session[:user_id] = user.to_param
+      post :create, params: { post: { message: "Hello, world!" } }
+      expect(Post.find_by(message: "Hello, world!")).to be
+      @post = Post.find_by(message: "Hello, world!")
+      delete :destroy, params: { id: @post.id }
 
-     expect(response).to redirect_to(posts_url)
-   end
+      expect(response).to redirect_to(posts_url)
+    end
   end
 end

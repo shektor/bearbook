@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def create
     @userdbcheck = User.find_by(email: user_params[:email])
-    if @userdbcheck == nil
+    if @userdbcheck.nil?
       @user = User.new(user_params)
       @user.save
       redirect_to login_path
