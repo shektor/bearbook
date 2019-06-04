@@ -1,9 +1,9 @@
 # Bearbook    
 [![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears) [![Coverage Status](https://coveralls.io/repos/github/CarlyJ88/Acebook-The-Brave-Bears/badge.svg?branch=master&service=github)](https://coveralls.io/github/CarlyJ88/Acebook-The-Brave-Bears?branch=master&service=github)
 
-Bearbook is an iteration of the Makers Acebook clone engineering project. To try it out visit at: http://acebook-the-brave-bears.herokuapp.com/
+Bearbook is an iteration of the Makers Acebook clone engineering project.
 
-### [Team](https://github.com/shektor/bearbook#team) - [Screenshots](https://github.com/shektor/bearbook#screenshots) - [Our Process](https://github.com/shektor/bearbook#our-process) - [Quickstart](https://github.com/shektor/bearbook#quickstart) - [Testing](https://github.com/shektor/bearbook#testing) 
+### [Team](https://github.com/shektor/bearbook#team) - [Our Process](https://github.com/shektor/bearbook#our-process) - [Quickstart](https://github.com/shektor/bearbook#quickstart) - [Testing](https://github.com/shektor/bearbook#testing) - [Screenshots](https://github.com/shektor/bearbook#screenshots) 
 
 ## Team 
 
