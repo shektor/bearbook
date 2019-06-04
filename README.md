@@ -1,10 +1,9 @@
-# AceBook     [![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears)[![Coverage Status](https://coveralls.io/repos/github/CarlyJ88/Acebook-The-Brave-Bears/badge.svg?branch=master&service=github)](https://coveralls.io/github/CarlyJ88/Acebook-The-Brave-Bears?branch=master&service=github)
-
-### [Welcome](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#welcome-to-bearbook) - [Team](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#team) - [Screenshots](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#screenshots) - [Our Process](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#our-process) - [Quickstart](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#quickstart) - [Testing](https://github.com/CarlyJ88/Acebook-The-Brave-Bears#testing) 
-
-## Welcome to Bearbook
+# Bearbook    
+[![Build Status](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears.png?branch=master)](https://travis-ci.org/CarlyJ88/Acebook-The-Brave-Bears) [![Coverage Status](https://coveralls.io/repos/github/CarlyJ88/Acebook-The-Brave-Bears/badge.svg?branch=master&service=github)](https://coveralls.io/github/CarlyJ88/Acebook-The-Brave-Bears?branch=master&service=github)
 
 Bearbook is an iteration of the Makers Acebook clone engineering project. To try it out visit at: http://acebook-the-brave-bears.herokuapp.com/
+
+### [Team](https://github.com/shektor/bearbook#team) - [Screenshots](https://github.com/shektor/bearbook#screenshots) - [Our Process](https://github.com/shektor/bearbook#our-process) - [Quickstart](https://github.com/shektor/bearbook#quickstart) - [Testing](https://github.com/shektor/bearbook#testing) 
 
 ## Team 
 
@@ -14,15 +13,6 @@ Bearbook is an iteration of the Makers Acebook clone engineering project. To try
 * [Steven Hektor](https://github.com/shektor)
 * [Scott Hall](https://github.com/HottScall)
 * [Oliver Cripps](https://github.com/ocripps24)
-
-## Screenshots
-
-#### Signup
-![Signup](https://i.imgur.com/GlcPadc.jpg)
-#### Login
-![Login](https://imgur.com/IisN4Sf.jpg)
-#### Profile
-![Profile](https://imgur.com/EZUZ7PS.jpg)
 
 ## Our Process
 
@@ -40,6 +30,7 @@ First, clone this repository. Then:
 
 ```bash
 > bundle install
+> cd bearbook
 > bin/rails db:create
 > bin/rails db:migrate
 
@@ -69,6 +60,15 @@ Coverage reports are generated every time RSpec tests are run. To view the resul
 `bundle` (if not installed )   
 `cd coverage`     
 `open index.html`    
+
+## Screenshots
+
+#### Signup
+![Signup](https://i.imgur.com/GlcPadc.jpg)
+#### Login
+![Login](https://imgur.com/IisN4Sf.jpg)
+#### Profile
+![Profile](https://imgur.com/EZUZ7PS.jpg)
 
 ## How to contribute to this project
 See [CONTRIBUTING.md](CONTRIBUTING.md)
